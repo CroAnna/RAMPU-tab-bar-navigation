@@ -27,11 +27,12 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 4,
+        length: 6,
         child: Scaffold(
             appBar: AppBar(
               title: const Text("Tab Navigation Bar"),
               bottom: const TabBar(
+                isScrollable: true,
                 tabs: [
                   Tab(
                     text: "Home",
@@ -48,6 +49,14 @@ class _RootPageState extends State<RootPage> {
                   Tab(
                     text: "Settings",
                     icon: Icon(Icons.settings),
+                  ),
+                  Tab(
+                    text: "Card",
+                    icon: Icon(Icons.card_membership),
+                  ),
+                  Tab(
+                    text: "Logout",
+                    icon: Icon(Icons.logout),
                   )
                 ],
               ),
@@ -57,7 +66,9 @@ class _RootPageState extends State<RootPage> {
                 Center(child: Text("Home")),
                 Center(child: Text("User")),
                 Center(child: Text("Buy")),
-                Center(child: Text("Settings"))
+                Center(child: Text("Settings")),
+                Center(child: Text("Cards")),
+                Center(child: Text("Logout"))
               ],
             )));
   }
